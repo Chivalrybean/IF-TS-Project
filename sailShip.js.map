@@ -1,1 +1,1 @@
-{"version":3,"file":"sailShip.js","sourceRoot":"","sources":["sailShip.ts"],"names":[],"mappings":"AAAA,sFAAsF"}
+{"version":3,"file":"sailShip.js","sourceRoot":"","sources":["sailShip.ts"],"names":[],"mappings":"AAAA,sFAAsF;AAEtF;IAEE,cAAY,QAAgB,EAAE,UAAkB;QAC9C,IAAI,CAAC,IAAI,GAAG,QAAQ,CAAC;IACvB,CAAC;IACH,WAAC;AAAD,CAAC,AALD,IAKC;AAED;IAEE,mBAAY,QAAuB;QACjC,IAAI,CAAC,GAAG,GAAG,QAAQ,CAAC;IACtB,CAAC;IACH,gBAAC;AAAD,CAAC,AALD,IAKC"}

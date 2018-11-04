@@ -56,13 +56,21 @@ var device = /** @class */ (function (_super) {
     return device;
 }(thingy));
 var activeRoom;
+var pageOutput;
+var mkBtn = document.createElement("BUTTON");
 function roomToggle(currRoom) {
     activeRoom = currRoom;
 }
 function sayDesc(desc) {
-    console.log(desc);
+    document.getElementById('textOutputSpan').innerHTML = desc;
 }
 var wakeRoom = new room("Hypersleep pod bay", "The lights are low, there is a panel with a soft red glowing on the wall.", null, ["Starboard"]);
-console.log("You awake after a dream you can't remember. You lay a while, unsure why you're awake, but then a low one you hear tells you there's trouble, and you've been woken up to fix it.");
+window.onload = function () {
+    document.getElementById("textOutputSpan").innerHTML = "You awake after a dream you can't remember. You lay a while, unsure why you're awake, but then a low one you hear tells you there's trouble, and you've been woken up to fix it.";
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("Exit bed");
+    btn.appendChild(t);
+    document.getElementById("textOutputSpan").appendChild(btn);
+};
 sayDesc(activeRoom.background);
 //# sourceMappingURL=sailShip.js.map

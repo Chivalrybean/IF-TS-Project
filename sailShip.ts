@@ -58,16 +58,25 @@ class device extends thingy{
 }
 
 var activeRoom: room;
+var pageOutput: string;
+var mkBtn = document.createElement("BUTTON");
 
 function roomToggle(currRoom: room) {
   activeRoom = currRoom;
 }
 
 function sayDesc(desc: string) {
-  console.log(desc)
+  document.getElementById('textOutputSpan').innerHTML = desc;
 }
 
 let wakeRoom = new room("Hypersleep pod bay", "The lights are low, there is a panel with a soft red glowing on the wall.", null, ["Starboard"])
-console.log("You awake after a dream you can't remember. You lay a while, unsure why you're awake, but then a low one you hear tells you there's trouble, and you've been woken up to fix it.");
+window.onload = function () {
+  document.getElementById("textOutputSpan").innerHTML = "You awake after a dream you can't remember. You lay a while, unsure why you're awake, but then a low one you hear tells you there's trouble, and you've been woken up to fix it.";
+  var btn = document.createElement("BUTTON");
+  var t = document.createTextNode("Exit bed");
+  btn.appendChild(t);
+  document.getElementById("textOutputSpan").appendChild(btn);
+}
+
 
 sayDesc (activeRoom.background)
